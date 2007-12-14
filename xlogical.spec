@@ -42,7 +42,7 @@ rm -f config.* configure
 
 aclocal-1.4
 automake-1.4 -a
-autoconf-2.5x
+autoconf
 
 %configure --bindir=%_gamesbindir --datadir=%_gamesdatadir
 
