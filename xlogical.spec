@@ -19,7 +19,6 @@ Patch0:    xlogical-c++-compil.patch
 Group:     Games/Arcade
 License: GPL
 URL:        http://changeling.ixionstudios.com/xlogical/
-BuildRoot: %_tmppath/%{name}-build
 BuildRequires: SDL-devel
 BuildRequires: SDL_image-devel
 BuildRequires: SDL_mixer-devel
