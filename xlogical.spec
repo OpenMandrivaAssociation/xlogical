@@ -55,17 +55,6 @@ install -D -m 644 %{SOURCE3} $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 install -D -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 install -D -m 644 %{SOURCE1} $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
 
-install -d -m 755 $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-	command="%{_gamesbindir}/%{name}" \
-	needs="X11" \
-	section="More applications/Games/Arcade" \
-	icon="%{name}.png" \
-	title="%{longname}" \
-	longtitle="A puzzle game" \
-    xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -89,7 +78,6 @@ EOF
 %{_liconsdir}/*.png
 %{_iconsdir}/*.png
 %{_miconsdir}/*.png
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
 
 %post
