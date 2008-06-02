@@ -73,8 +73,8 @@ EOF
 %doc README COPYING ChangeLog AUTHORS NEWS TODO LICENSE
 %{_gamesbindir}/%{name}
 %{_gamesdatadir}/%{name}
-%dir %{_localstatedir}/%{name}
-%{_localstatedir}/%{name}/xlogical.scores
+%dir %{_localstatedir}/lib/%{name}
+%{_localstatedir}/lib/%{name}/xlogical.scores
 %{_liconsdir}/*.png
 %{_iconsdir}/*.png
 %{_miconsdir}/*.png
