@@ -52,6 +52,8 @@ autoconf
 
 %install
 %makeinstall bindir=%buildroot%_gamesbindir datadir=%buildroot%_gamesdatadir
+mkdir -p %buildroot%{_localstatedir}/lib
+mv %buildroot%{_localstatedir}/%{name} %buildroot%{_localstatedir}/lib/
 
 install -D -m 644 %{SOURCE3} $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 install -D -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
