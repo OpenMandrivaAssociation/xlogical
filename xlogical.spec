@@ -5,7 +5,7 @@
 %define    version %{majorversion}_%{subversion}
 %define    sourceversion %{majorversion}-%{subversion}
 
-%define    release %mkrel 7 
+%define    release %mkrel 8 
 
 Summary:   %{longname} - A puzzle game
 Name:      %{name}
@@ -46,14 +46,12 @@ aclocal-1.4
 automake-1.4 -a
 autoconf
 
-%configure --bindir=%_gamesbindir --datadir=%_gamesdatadir
+%configure --bindir=%_gamesbindir --datadir=%_gamesdatadir --localstatedir=%{_localstatedir}/lib
 
 %make
 
 %install
-%makeinstall bindir=%buildroot%_gamesbindir datadir=%buildroot%_gamesdatadir
-mkdir -p %buildroot%{_localstatedir}/lib
-mv %buildroot%{_localstatedir}/%{name} %buildroot%{_localstatedir}/lib/
+%makeinstall bindir=%buildroot%_gamesbindir datadir=%buildroot%_gamesdatadir localstatedir=%buildroot%{_localstatedir}/lib
 
 install -D -m 644 %{SOURCE3} $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 install -D -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
