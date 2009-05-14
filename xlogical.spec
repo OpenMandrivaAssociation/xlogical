@@ -5,7 +5,7 @@
 %define    version %{majorversion}_%{subversion}
 %define    sourceversion %{majorversion}-%{subversion}
 
-%define    release %mkrel 6
+%define    release %mkrel 7 
 
 Summary:   %{longname} - A puzzle game
 Name:      %{name}
@@ -16,8 +16,9 @@ Source1:   %{name}-16.png
 Source2:   %{name}-32.png
 Source3:   %{name}-48.png
 Patch0:    xlogical-c++-compil.patch
-Group:     Games/Arcade
-License: GPL
+Patch1:    xlogical-gcc43.patch
+Group:     Games/Puzzles
+License: GPLv2+
 URL:        http://changeling.ixionstudios.com/xlogical/
 BuildRoot: %_tmppath/%{name}-build
 BuildRequires: SDL-devel
@@ -35,6 +36,7 @@ parallel thinking and quick reflexes.
 %prep
 %setup -n %{name}-%{sourceversion} -q
 %patch0 -p0 -b .nanar
+%patch1 -p1 -b .gcc43
 
 %build
 
@@ -65,7 +67,7 @@ Exec=%_gamesbindir/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=Game;ArcadeGame;X-MandrivaLinux-MoreApplications-Games-Arcade;
+Categories=Game;LogicGame;
 EOF
 
 %files
@@ -92,6 +94,3 @@ EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-
-
