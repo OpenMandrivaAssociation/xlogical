@@ -43,8 +43,8 @@ parallel thinking and quick reflexes.
 rm -f config.* configure
 
 aclocal-1.4
-automake-1.4 -a
 autoconf
+automake-1.4 -a
 
 %configure --bindir=%_gamesbindir --datadir=%_gamesdatadir --localstatedir=%{_localstatedir}/lib
 
