@@ -5,7 +5,7 @@
 %define    version %{majorversion}_%{subversion}
 %define    sourceversion %{majorversion}-%{subversion}
 
-%define    release %mkrel 8 
+%define    release %mkrel 9 
 
 Summary:   %{longname} - A puzzle game
 Name:      %{name}
