@@ -1,0 +1,62 @@
+Index: xlogical-1.0-8/gamelogic.cpp
+===================================================================
+--- xlogical-1.0-8/gamelogic.cpp
++++ xlogical-1.0-8/gamelogic.cpp	2009-05-14 16:47:25.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include<fstream>
+ #include<cstdio>
+ #include<cctype>
++#include<cstdlib>
+ 
+ #ifndef WIN32
+ #include<unistd.h>
+Index: xlogical-1.0-8/levelmap.cpp
+===================================================================
+--- xlogical-1.0-8/levelmap.cpp
++++ xlogical-1.0-8/levelmap.cpp	2009-05-14 16:49:01.000000000 +0200
+@@ -26,6 +26,7 @@
+ #include <cstring>
+ #include <ctime>
+ #include <iostream>
++#include <cstdlib>
+ 
+ #ifndef USE_HASH_MAP
+ #include <map>
+Index: xlogical-1.0-8/mapedit.cpp
+===================================================================
+--- xlogical-1.0-8/mapedit.cpp
++++ xlogical-1.0-8/mapedit.cpp	2009-05-14 16:50:13.000000000 +0200
+@@ -26,6 +26,8 @@
+ #include<cstdio>
+ #include<list>
+ #include<vector>
++#include<cstring>
++#include<cstdlib>
+ 
+ #ifndef WIN32
+ #include<unistd.h>
+Index: xlogical-1.0-8/modlist.cpp
+===================================================================
+--- xlogical-1.0-8/modlist.cpp
++++ xlogical-1.0-8/modlist.cpp	2009-05-14 16:50:38.000000000 +0200
+@@ -22,6 +22,7 @@
+ 
+ #include <iostream>
+ #include <fstream>
++#include <cstdlib>
+ 
+ #ifdef WIN32
+ #include <afxwin.h>
+Index: xlogical-1.0-8/tile_spinner.cpp
+===================================================================
+--- xlogical-1.0-8/tile_spinner.cpp
++++ xlogical-1.0-8/tile_spinner.cpp	2009-05-14 16:52:08.000000000 +0200
+@@ -21,7 +21,7 @@
+ ////////////////////////////////////////////////////////////////////////
+ 
+ 
+-
++#include <cstdlib>
+ 
+ // Application Includes
+ #include "audio.h"

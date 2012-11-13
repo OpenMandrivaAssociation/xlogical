@@ -1,0 +1,11 @@
+--- ./gamelogic.cpp.bad	2006-07-15 03:57:41.225664996 +0200
++++ ./gamelogic.cpp	2006-07-15 03:58:05.725809889 +0200
+@@ -154,7 +154,7 @@
+ 		levelFile = NULL;
+ 	}
+ 
+-	currentMap = NULL;
++	currentMap = gameLevels.begin();
+ 
+ 	playerName = new char[32+1];
+ 	strcpy( playerName, "nobody" );
