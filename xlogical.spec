@@ -94,3 +94,58 @@ EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+
+%changelog
+* Fri May 22 2009 Samuel Verschelde <stormi@mandriva.org> 1.0_8-9mdv2010.0
++ Revision: 378776
+- fix autotools order
+
+* Thu May 14 2009 Samuel Verschelde <stormi@mandriva.org> 1.0_8-8mdv2010.0
++ Revision: 375762
+- fix highscores
+
+* Thu May 14 2009 Samuel Verschelde <stormi@mandriva.org> 1.0_8-7mdv2010.0
++ Revision: 375700
+- fix paths
+- fix build
+- fix Group and category
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - rebuild
+    - rebuild
+    - drop old menu
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+    - adapt to %%_localstatedir now being /var instead of /var/lib (#22312)
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 1.0_8-3mdv2008.1
++ Revision: 136608
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+    - fix autoconf-2.5x path
+    - kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+
+* Mon Jan 15 2007 Olivier Thauvin <nanardon@mandriva.org> 1.0_8-3mdv2007.0
++ Revision: 108980
+- buildrequires
+- rebuild
+
+* Sat Sep 09 2006 Olivier Thauvin <nanardon@mandriva.org> 1.0_8-2mdv2007.0
++ Revision: 60632
+- fix menu (use summary macros)
+
+* Sun Jul 16 2006 Olivier Thauvin <nanardon@mandriva.org> 1.0_8-1mdv2007.0
++ Revision: 41284
+- fix patch to make it compil (couriousous)
+- 1.0-8
+- Import xlogical
+
+* Wed Jun 16 2004 Olivier Thauvin <thauvin@aerov.jussieu.fr> 1.0-7.cvs20030522.4mdk
+- rebuild
+- fix build
+
